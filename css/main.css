@@ -623,3 +623,73 @@ margin-left: 1px;
   /* address 하면 기울어지기 때문에 스타일 normal로 똑바로 세움 */
   font-style: normal;
 }
+/* top 버튼 */
+.top-button{
+  position: fixed;
+  right: 30px;
+  bottom: 60px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  gap: 10px;
+}
+.top-button .chat-btn span{
+  position: absolute;
+  top: 30px;
+  right: 80px;
+  width: 180px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 23px;
+  padding: 8px 10px;
+  text-align: center;
+  box-shadow: 0px 3px 7px 0 rgb(0, 0, 0, 0.3);
+  display: none;
+}
+.top-button .chat-btn:hover span{
+  display: block;
+}
+.top-button .chat-btn{
+  animation: updown 1.5s infinite;
+  /* -webkit-animation: updown 1.5s infinite; */
+  /* 다른 브라우저에서도 작동 될 수 있게 하기 위해 -webkit을 사용. */
+}
+.top-button .shop-btn{
+  position:relative;
+  display: block;
+  width: 55px;
+  line-height: 55px;
+  border-radius: 50%;
+  background-color: #fff;
+  font-weight: 500;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0px 3px 7px 0 rgb(0, 0, 0, 0.3);
+  letter-spacing: 1px;
+}
+.top-button .top-btn{
+  background-color: #ed1c24;
+  width: 55px;
+  line-height: 55px;
+  border-radius: 50%;
+  text-align: center;
+}
+.top-button .top-btn img{
+  transform: rotate(180deg);
+}
+.top-button .top-btn img.up{
+  transform: rotate(0deg);
+/* 이미지의 위아래를 전환시키기 위해 적용 */
+}
+/* 애니메이션 효과 */
+@keyframes updown{
+  0%{
+    transform: translatey(0);
+  }
+  50%{
+    transform: translatey(-10%);
+  }
+  100%{
+    transform: translatey(0);
+  }
+}
