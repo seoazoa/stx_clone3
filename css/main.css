@@ -50,6 +50,83 @@ body {
   display: block;
   position: relative;
 }
+/* 안내창 */
+.modal-wrap{
+position:fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5);
+z-index: 99999;
+}
+.modal-main{
+  width: 600px;
+  height: 500px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius:50px;
+  padding: 130px 40px;
+  line-height: 50px;
+}
+/* .modal-main{
+  position: reletive;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  background-color: #fff;
+  width: 600px;
+  height: 500px;
+  border-radius: 50%;
+  text-align:center;
+} */
+.modal-main .modal-logo{
+  position: absolute;
+  display: block;
+  top:-50px;
+  left: 50%;
+  transform: translate(-50%);
+  background: url("../images/KakaoTalk_20240105_130729607.png")no-repeat center #ffe6e6;
+  border-radius: 70px;
+  width: 100px;
+  height: 100px;
+  border: 3px solid #fff;
+}
+.modal-main .modal-nonotic{
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  
+}
+.modal-nonotic > span{
+font-size: 16px;
+}
+.modal-main .modal-close{
+  position: absolute;
+  bottom:0;
+  left:0;
+  text-align: center;
+  height: 50px;
+  background-color: #ffd1df;
+  width: 100%;
+  border-radius: 0 0 50px 50px;
+}
+.modal-nonotic strong{
+  color: red;
+  /* box-shadow: inset 0px -0.5em 0 0 yellow; */
+  background: linear-gradient(to top, yellow 50%, transparent 50%);
+  font-weight: bold;
+}
+.modal-close{
+  font-weight: 400;
+}
+.modal-close > i{
+  font-size: 12px;
+  font-weight: 500;
+}
 /* 헤더 */
 .header {
   width: 100%;
