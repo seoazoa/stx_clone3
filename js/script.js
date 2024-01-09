@@ -18,12 +18,15 @@ window.onload = function () {
 
   //   top 버튼 스크롤 기능
   const topBtn = document.getElementById("top-btn");
+
   topBtn.addEventListener("click", function (event) {
-    event.preventDefault(event);
+    event.preventDefault();
+
     console.log(window.scrollY);
+
     if (window.scrollY == 0) {
       window.scrollTo({
-        top: 2585,
+        top: 2952,
         behavior: "smooth",
       });
     } else {
@@ -33,9 +36,10 @@ window.onload = function () {
       });
     }
   });
+
   // 화살표 이미지 회전
-  const topBtnImg = document.getElementById("top-btn-img")
-  window.addEventListener("scroll" , function(scTop){
+  const topBtnImg = document.getElementById("top-btn-img");
+  window.addEventListener("scroll", function (scTop) {
     scTop = window.document.documentElement.scrollTop;
     if(scTop > 0){
       topBtnImg.classList.add("up")
@@ -43,6 +47,13 @@ window.onload = function () {
     else{
       topBtnImg.classList.remove("up")
     }
-
+  });
+  // 안내창 스크립트
+  const body = document.querySelector("body")
+  const modal = document.querySelector(".modal-wrap")
+  modal.addEventListener("click" , function(){
+    modal.style.display = "none"
+    fadeout(modal)
   })
+
 };

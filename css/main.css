@@ -51,6 +51,9 @@ body {
   position: relative;
 }
 /* 안내창 */
+body.active{
+  overflow-y: auto;
+}
 .modal-wrap{
 position:fixed;
 top: 0;
